@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:id="creditsRoot" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="minesweeper.controller.CreditsWindowController">
+	<children>
+		<Pane>
+			<children>
+				<Label text="Icons:">
+					<font>
+						<Font size="14.0" />
+					</font>
+				</Label>
+			</children>
+			<VBox.margin>
+				<Insets bottom="20.0" />
+			</VBox.margin>
+		</Pane>
+		<HBox alignment="CENTER_LEFT">
+			<children>
+				<Label text="Bomb, check icons made by" />
+				<Hyperlink text="Freepik" />
+				<Label text="from" />
+				<Hyperlink text="Flaticon" />
+				<Label text="licensed under" />
+				<Hyperlink text="CC 3.0 BY" />
+			</children>
+			<VBox.margin>
+				<Insets bottom="5.0" />
+			</VBox.margin>
+		</HBox>
+		<Separator prefWidth="200.0" />
+		<VBox>
+			<children>
+				<HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="50.0">
+					<children>
+						<Label text="&quot;bomb_no&quot; icon is a derivative of &quot;Prohibition&quot; made by" />
+						<Hyperlink text="Roundicons" />
+						<Label text="from" />
+						<Hyperlink text="Flaticon" />
+						<Label text="licensed under" />
+						<Hyperlink text="CC 3.0 BY" />
+					</children>
+				</HBox>
+				<HBox alignment="CENTER_LEFT">
+					<children>
+						<Label text="&quot;bomb_no&quot; was created by Eperjesi Ádám licensed under" />
+						<Hyperlink text="CC 3.0 BY" />
+					</children>
+				</HBox>
+			</children>
+			<VBox.margin>
+				<Insets />
+			</VBox.margin>
+		</VBox>
+		<Separator prefWidth="200.0" />
+		<VBox layoutX="10.0" layoutY="78.0">
+			<children>
+				<HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="50.0">
+					<children>
+						<Label text="&quot;cell_flag&quot; icon is a derivative of &quot;Flag&quot; made by" />
+						<Hyperlink text="Madebyoliver" />
+						<Label text="from" />
+						<Hyperlink text="Flaticon" />
+						<Label text="licensed under" />
+						<Hyperlink text="CC 3.0 BY" />
+					</children>
+				</HBox>
+				<HBox alignment="CENTER_LEFT">
+					<children>
+						<Label text="&quot;cell_flag&quot; was created by Eperjesi Ádám licensed under" />
+						<Hyperlink text="CC 3.0 BY" />
+					</children>
+				</HBox>
+			</children>
+			<VBox.margin>
+				<Insets />
+			</VBox.margin>
+		</VBox>
+		<Separator prefWidth="200.0" />
+		<VBox layoutX="10.0" layoutY="129.0">
+			<children>
+				<HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="50.0">
+					<children>
+						<Label text="&quot;cell_question&quot; icon is a derivative of &quot;Question mark&quot; made by" />
+						<Hyperlink text="Zurb" />
+						<Label text="from" />
+						<Hyperlink text="Flaticon" />
+						<Label text="licensed under" />
+						<Hyperlink text="CC 3.0 BY" />
+					</children>
+				</HBox>
+				<HBox alignment="CENTER_LEFT">
+					<children>
+						<Label text="&quot;cell_question&quot; was created by Eperjesi Ádám licensed under" />
+						<Hyperlink text="CC 3.0 BY" />
+					</children>
+				</HBox>
+			</children>
+		</VBox>
+		<Separator prefWidth="200.0" />
+		<VBox layoutX="10.0" layoutY="175.0">
+			<children>
+				<HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="50.0">
+					<children>
+						<Label text="&quot;explosion&quot; icon is a derivative of &quot;Exploding&quot; made by" />
+						<Hyperlink text="OCHA" />
+						<Label text="from" />
+						<Hyperlink text="Flaticon" />
+						<Label text="licensed under" />
+						<Hyperlink text="CC 3.0 BY" />
+					</children>
+				</HBox>
+				<HBox alignment="CENTER_LEFT">
+					<children>
+						<Label text="&quot;explosion&quot; was created by Eperjesi Ádám licensed under" />
+						<Hyperlink text="CC 3.0 BY" />
+					</children>
+				</HBox>
+			</children>
+		</VBox>
+		<Separator prefWidth="200.0" />
+		<VBox layoutX="10.0" layoutY="228.0">
+			<children>
+				<HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="50.0">
+					<children>
+						<Label text="&quot;number_1-8&quot; icons are derivatives of &quot;Numbers and symbols of colors&quot; made by" />
+						<Hyperlink text="Sapann-Design / Freepik" />
+					</children>
+				</HBox>
+				<HBox alignment="CENTER_LEFT">
+					<children>
+						<Label text="&quot;number_1-8&quot; icons were created by Eperjesi Ádám" />
+					</children>
+				</HBox>
+			</children>
+		</VBox>
+		<Separator prefWidth="200.0" />
+		<VBox layoutX="10.0" layoutY="277.0">
+			<children>
+				<HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="50.0">
+					<children>
+						<Label text="&quot;square&quot; icons are derivatives of &quot;Square colors and gray&quot; made by" />
+						<Hyperlink text="Sapann-Design / Freepik" />
+					</children>
+				</HBox>
+				<HBox alignment="CENTER_LEFT">
+					<children>
+						<Label text="&quot;square&quot; icons were created by Eperjesi Ádám" />
+					</children>
+				</HBox>
+			</children>
+		</VBox>
+		<Separator prefWidth="200.0" />
+		<VBox layoutX="10.0" layoutY="320.0">
+			<children>
+				<HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="50.0">
+					<children>
+						<Label text="&quot;bomb&quot; icon displayed on the game bar is a derivative of &quot;Bomb&quot; made by" />
+						<Hyperlink text="Roundicons" />
+						<Label text="from" />
+						<Hyperlink text="Flaticon" />
+						<Label text="licensed under" />
+						<Hyperlink text="CC 3.0 BY" />
+					</children>
+				</HBox>
+				<HBox alignment="CENTER_LEFT">
+					<children>
+						<Label text="&quot;bomb&quot; was created by Eperjesi Ádám licensed under" />
+						<Hyperlink text="CC 3.0 BY" />
+					</children>
+				</HBox>
+			</children>
+		</VBox>
+		<Separator prefWidth="200.0" />
+		<HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="50.0">
+			<children>
+				<Label text="Stopwatch icon made by" />
+				<Hyperlink text="Madebyoliver" />
+				<Label text="from" />
+				<Hyperlink text="Flaticon" />
+				<Label text="licensed under" />
+				<Hyperlink text="CC 3.0 BY" />
+			</children>
+		</HBox>
+	</children>
+</VBox>

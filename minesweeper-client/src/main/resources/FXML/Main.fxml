@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:id="rootContainer" styleClass="root" alignment="BASELINE_CENTER">
+	<stylesheets>
+		<URL value="@../style.css" />
+	</stylesheets>
+	<!--<children>
+		<fx:include source="Menu.fxml" />
+		<fx:include source="FacebookBar.fxml" />
+		<fx:include source="Gamebar.fxml" />
+		<fx:include source="Grid.fxml" />
+	</children>-->
+</VBox>

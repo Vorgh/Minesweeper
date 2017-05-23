@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.control.Label?>
+
+<GridPane minWidth="250.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="minesweeper.controller.GameBarController">
+	<children>
+		<HBox minWidth="50.0" GridPane.hgrow="ALWAYS" GridPane.rowSpan="2" GridPane.vgrow="NEVER">
+			<children>
+
+				<ImageView fx:id="fbImageView" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true">
+					<HBox.margin>
+						<Insets left="10.0" />
+					</HBox.margin>
+				</ImageView>
+			</children>
+		</HBox>
+		
+		<HBox alignment="CENTER" fillHeight="false" GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.vgrow="NEVER">
+         <children>
+            <ToolBar>
+               <items>
+                  <Circle fx:id="colorCircleBlue" fill="#0b80c3" radius="7.0" stroke="BLACK" strokeWidth="2.0" />
+                  <Circle fx:id="colorCircleTeal" fill="#147b66" radius="5.0" stroke="BLACK" />
+                  <Circle fx:id="colorCircleYellow" fill="#bf9b09" radius="5.0" stroke="BLACK" />
+                  <Circle fx:id="colorCircleRed" fill="#ae2a42" radius="5.0" stroke="BLACK" />
+               </items>
+            </ToolBar>
+         </children>
+		</HBox>
+		
+		<HBox alignment="TOP_CENTER" GridPane.columnIndex="1">
+			<children>
+				<Label fx:id="fbLoginMessage" alignment="TOP_CENTER" textAlignment="CENTER" visible="false" wrapText="true" />
+			</children>
+		</HBox>
+		
+		<HBox alignment="TOP_CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1">
+			<children>
+            <VBox alignment="CENTER">
+               <children>
+      				<Label fx:id="fbNameLabel" visible="false" wrapText="true" />
+      
+      				<ImageView fx:id="fbLoginButton" fitHeight="30" fitWidth="150">
+      					<image>
+      						<Image url="@../FacebookImages/facebook_login.png" />
+      					</image>
+      				</ImageView>
+               </children>
+            </VBox>
+			</children>
+		</HBox>
+		
+		<HBox fx:id="mineBox" minWidth="50.0" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2">
+			<padding>
+				<Insets bottom="0" left="5.0" right="0" top="10.0" />
+			</padding>
+			<children>
+				<ImageView fx:id="mineImageView" fitHeight="20" fitWidth="20" preserveRatio="true" />
+				<StackPane fx:id="mineCountBox" prefHeight="20.0" prefWidth="40.0" styleClass="rounded-box">
+					<children>
+						<Label fx:id="mineLabel" alignment="CENTER" text="0" textFill="WHITE" />
+					</children>
+				</StackPane>
+			</children>
+		</HBox>
+		
+		<HBox fx:id="timeBox" minWidth="50.0" GridPane.columnIndex="2" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2">
+			<padding>
+				<Insets bottom="0" left="0" right="5.0" top="10.0" />
+			</padding>
+			<children>
+				<StackPane fx:id="timeCountBox" prefHeight="20" prefWidth="40.0" styleClass="rounded-box">
+					<children>
+						<Label fx:id="timeLabel" alignment="CENTER" textFill="WHITE" />
+					</children>
+				</StackPane>
+				<ImageView fx:id="timeImageView" fitHeight="20" fitWidth="20" preserveRatio="true" />
+			</children>
+		</HBox>
+		
+		<HBox minWidth="50.0" GridPane.columnIndex="2" GridPane.hgrow="ALWAYS">
+			<children>
+				<Button fx:id="fbLogoutButton" alignment="CENTER" mnemonicParsing="false" style="-fx-background-color: #3B5998; -fx-font-weight: bold; -fx-font-size: 10;" text="Log out" textAlignment="CENTER" textFill="WHITE" visible="false" />
+			</children>
+		</HBox>
+	</children>
+	
+	<columnConstraints>
+		<ColumnConstraints fillWidth="false" halignment="LEFT" />
+		<ColumnConstraints fillWidth="false" halignment="CENTER" />
+		<ColumnConstraints fillWidth="false" halignment="RIGHT" />
+	</columnConstraints>
+	<rowConstraints>
+		<RowConstraints fillHeight="false" valignment="TOP" vgrow="SOMETIMES" />
+		<RowConstraints fillHeight="false" valignment="TOP" vgrow="SOMETIMES" />
+		<RowConstraints fillHeight="false" />
+	</rowConstraints>
+</GridPane>

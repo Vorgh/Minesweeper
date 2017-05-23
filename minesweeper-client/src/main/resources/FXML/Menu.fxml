@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuItem?>
+
+<MenuBar xmlns:fx="http://javafx.com/fxml/1"
+	fx:id="menuBar" fx:controller="minesweeper.controller.MenuController" styleClass="menu">
+	<menus>
+		<Menu text="Game">
+			<items>
+				<MenuItem fx:id="newGameLastPicked" text="New" />
+			</items>
+			<items>
+				<MenuItem fx:id="newGameEasy" text="Easy" />
+			</items>
+			<items>
+				<MenuItem fx:id="newGameMedium" text="Medium" />
+			</items>
+			<items>
+				<MenuItem fx:id="newGameHard" text="Hard" />
+			</items>
+			<items>
+				<MenuItem fx:id="newGameCustom" text="Custom..." />
+			</items>
+			<items>
+				<MenuItem fx:id="highscores" text="Highscores..." />
+			</items>
+		</Menu>
+		<Menu text="Help">
+			<items>
+				<MenuItem fx:id="credits" text="Credits..." />
+			</items>
+		</Menu>
+	</menus>
+</MenuBar>
+

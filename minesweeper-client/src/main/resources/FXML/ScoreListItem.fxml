@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.HBox?>
+
+<!-- 30 6 130 60 60 90 90 -->
+
+<VBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="minesweeper.controller.ScoreCellController">
+	<children>
+		<HBox alignment="CENTER_LEFT">
+			<children>
+				<ImageView fx:id="profileImageView" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" />
+				<Separator orientation="VERTICAL" />
+				<Label fx:id="nameLabel" alignment="CENTER" prefWidth="120.0">
+					<HBox.margin>
+						<Insets left="5.0" right="5.0" />
+					</HBox.margin>
+				</Label>
+				<Label fx:id="mineLabel" alignment="CENTER" prefWidth="50.0" text="Label">
+					<HBox.margin>
+						<Insets left="5.0" right="5.0" />
+					</HBox.margin>
+				</Label>
+				<Label fx:id="timeLabel" alignment="CENTER" prefWidth="50.0" text="Label">
+					<HBox.margin>
+						<Insets left="5.0" right="5.0" />
+					</HBox.margin>
+				</Label>
+				<Label fx:id="diffLabel" alignment="CENTER" prefWidth="80.0" text="Label">
+					<HBox.margin>
+						<Insets left="5.0" right="5.0" />
+					</HBox.margin>
+				</Label>
+				<Label fx:id="dateLabel" alignment="CENTER" prefWidth="80.0" text="Label">
+					<HBox.margin>
+						<Insets left="5.0" right="5.0" />
+					</HBox.margin>
+				</Label>
+			</children>
+		</HBox>
+		<Separator prefWidth="460.0" />
+	</children>
+</VBox>

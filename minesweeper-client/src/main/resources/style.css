@@ -1,0 +1,55 @@
+.root
+{
+    main-background-color: rgb(186, 191, 198);
+    cell-border-color: black;
+    box-bg-blue: rgb(11, 128, 195);
+    box-bg-red: rgb(174, 42, 66);
+    box-bg-yellow: rgb(191, 155, 9);
+    box-bg-teal: rgb(20, 123, 102);
+    
+    -fx-background-color: main-background-color;
+}
+.menu
+{
+	-fx-background-color: black, main-background-color;
+	-fx-background-insets: 0, 0 0 1 0;
+	-fx-text-fill: black;
+}
+.grid
+{
+    -fx-background-color: main-background-color, cell-border-color;
+    -fx-background-insets: 0, 9 0 0 0;
+	-fx-padding: 10 1 1 1;
+	-fx-alignment: center;
+	-fx-hgap: 1;
+	-fx-vgap: 1;
+}
+.imageview
+{
+	-fx-background-color: rgb(255, 0, 0);
+}
+.rounded-box
+{
+	-fx-border-radius: 10 10 10 10;
+  	-fx-background-radius: 10 10 10 10;
+}
+#rounded-box-blue
+{
+	-fx-background-color: cell-border-color, box-bg-blue;
+    -fx-background-insets: 0, 1 1 1 1;
+}
+#rounded-box-red
+{
+	-fx-background-color: cell-border-color, box-bg-red;
+    -fx-background-insets: 0, 1 1 1 1;
+}
+#rounded-box-yellow
+{
+	-fx-background-color: cell-border-color, box-bg-yellow;
+    -fx-background-insets: 0, 1 1 1 1;
+}
+#rounded-box-teal
+{
+	-fx-background-color: cell-border-color, box-bg-teal;
+    -fx-background-insets: 0, 1 1 1 1;
+}
