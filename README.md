@@ -27,7 +27,7 @@ To use the full functionality of the game, you will need online mode. You have t
 
 
 #### 1. Someone has already started a server and you just want to use it
-If you have the **IP** and **port** of an already working server, you just need to put them in the [project.properties](/minesweeper/minesweeper-client/src/main/resources/project.properties) file.  
+If you have the **IP** and **port** of an already working server, you just need to put them in the [project.properties](/minesweeper-client/src/main/resources/project.properties) file.  
 You need to change the following 2 lines:  
 * server.address=&#8727;your IP address&#8727;
 * server.port=&#8727;your server port&#8727;
@@ -43,7 +43,7 @@ If you want to start your own server, please see the instructions below.
 #### 2. Starting your own server
 Firstly, this project uses login through the [Facebook Graph API](https://developers.facebook.com/docs/graph-api) so you will need to create a new Facebook App, add the Facebook Login product to it, and don't forget to set it public.
 
-You'll need the client ID and app secret from your newly created Facebook App, and put them in the [server.properties](/minesweeper/minesweeper-server/src/main/resources/server.properties) file. Here, you will also need to specify the port where the server listens for requests.  
+You'll need the client ID and app secret from your newly created Facebook App, and put them in the [server.properties](/minesweeper-server/src/main/resources/server.properties) file. Here, you will also need to specify the port where the server listens for requests.  
 So you must change these lines:  
 * port=&#8727;your server port&#8727;
 * clientid=&#8727;your client ID&#8727;
