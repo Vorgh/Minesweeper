@@ -29,7 +29,7 @@ To use the full functionality of the game, you will need online mode. You have t
 #### 1. Someone has already started a server and you just want to use it
 If you have the **IP** and **port** of an already working server, you just need to put them in the [project.properties](/minesweeper-client/src/main/resources/project.properties) file.  
 You need to change the following 2 lines:  
-* server.address=&#8727;your IP address&#8727;
+* server.address=&#8727;your server IP&#8727;
 * server.port=&#8727;your server port&#8727;
 
 The default port is 8888, which is already included. Feel free to change it when needed.
@@ -49,7 +49,7 @@ So you must change these lines:
 * clientid=&#8727;your client ID&#8727;
 * appsecret=&#8727;your app secret&#8727;
 
-Rembember to delete these if you fork this project. **NEVER** share your app secret.
+**Rembember to delete these if you fork or use this project. NEVER share your app secret.**
 
 
 If everything was ok, you should be able to start your server now. You can connect using the instructions above.  
