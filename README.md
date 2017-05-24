@@ -49,7 +49,7 @@ So you must change these lines:
 * clientid=&#8727;your client ID&#8727;
 * appsecret=&#8727;your app secret&#8727;
 
-**Rembember to delete these if you fork or use this project. NEVER share your app secret.**
+**Don't forget to delete these if you share your version of this project. NEVER share your app secret.**
 
 
 If everything was ok, you should be able to start your server now. You can connect using the instructions above.  
