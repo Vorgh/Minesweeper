@@ -4,4 +4,4 @@
 target/
 scores.xml
 minesweeper.log
-db/
+*/minesweeper-server/db/*
