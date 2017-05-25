@@ -14,6 +14,7 @@ import javafx.fxml.FXML;
 import javafx.scene.image.Image;
 import javafx.scene.web.WebView;
 import minesweeper.connection.ServerConnection;
+import minesweeper.model.FacebookDataModel;
 
 /**
  * The controller of the Facebook login window.
@@ -128,7 +129,7 @@ public class FacebookLoginWindowController extends Controller
 		}
 		else
 		{
-			model.setFbLoginMessage("Could not get the Facebook client ID");
+			model.getFacebookModel().setFbLoginMessage("Could not get the Facebook client ID");
 			stage.hide();
 		}
 	}
@@ -150,14 +151,14 @@ public class FacebookLoginWindowController extends Controller
 			{
 				String message = "Facebook login successful!";
 				setModelFacebookData(ServerConnection.getConnectedUser());
-				model.setFbLoginMessage(message);
+				model.getFacebookModel().setFbLoginMessage(message);
 				logger.info(message);
 			}
 		}
 		catch (IOException | ClassNotFoundException e)
 		{
 			String message = "Facebook login failed!";
-			model.setFbLoginMessage(message);
+			model.getFacebookModel().setFbLoginMessage(message);
 			logger.warn(message);
 			logger.error(e.getMessage(), e);
 		}
@@ -175,9 +176,11 @@ public class FacebookLoginWindowController extends Controller
 	 */
 	private void setModelFacebookData(User user)
 	{
-		model.setFbName(user.getFirstName());
-		model.setFbProfilePic(new Image(user.getPicture().getUrl()));
-		model.setFbUserId(user.getId());
-		model.setFbLoggedIn(true);
+		FacebookDataModel facebookModel = model.getFacebookModel();
+		
+		facebookModel.setFbName(user.getFirstName());
+		facebookModel.setFbProfilePic(new Image(user.getPicture().getUrl()));
+		facebookModel.setFbUserId(user.getId());
+		facebookModel.setFbLoggedIn(true);
 	}
 }

@@ -109,7 +109,7 @@ public class MainView
 
 		gameBar.layoutBoundsProperty().addListener((observable, oldValue, newValue) ->
 		{
-			if (!model.getFbLoggedIn())
+			if (!model.getFacebookModel().getFbLoggedIn())
 				gameBarController.adjustLoginImageSize(newValue.getWidth());
 
 			adjustWindowSize();

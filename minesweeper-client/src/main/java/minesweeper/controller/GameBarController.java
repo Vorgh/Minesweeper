@@ -28,6 +28,7 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 import minesweeper.connection.ServerConnection;
+import minesweeper.model.FacebookDataModel;
 import minesweeper.model.MinesweeperModel;
 import minesweeper.util.ResourceUtils;
 
@@ -85,6 +86,8 @@ public class GameBarController extends Controller
 	private String color;
 	private Image mineImage;
 	private Image timeImage;
+	
+	private FacebookDataModel facebookModel;
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources)
@@ -133,8 +136,8 @@ public class GameBarController extends Controller
 		{
 			ServerConnection.cookieManager.getCookieStore().removeAll();
 			ServerConnection.setConnectedUser(null);
-			model.setFbLoggedIn(false);
-			model.setFbLoginMessage("Logged out!");
+			model.getFacebookModel().setFbLoggedIn(false);
+			model.getFacebookModel().setFbLoginMessage("Logged out!");
 
 			logger.info("Logged out!");
 		});
@@ -144,8 +147,9 @@ public class GameBarController extends Controller
 	public void setModel(MinesweeperModel model)
 	{
 		super.setModel(model);
+		facebookModel = model.getFacebookModel();
 
-		mineLabel.setText(String.valueOf(model.remainingMinesProperty().get()));
+		mineLabel.setText(String.valueOf(model.getRemainingMines()));
 		model.remainingMinesProperty().addListener((observable, oldValue, newValue) ->
 		{
 			mineLabel.setText(String.valueOf(newValue));
@@ -172,17 +176,17 @@ public class GameBarController extends Controller
 			setColor(newValue);
 		});
 
-		model.fbProfilePicProperty().addListener((observable, oldValue, newValue) ->
+		facebookModel.fbProfilePicProperty().addListener((observable, oldValue, newValue) ->
 		{
 			fbImageView.setImage(newValue);
 		});
 
-		model.fbNameProperty().addListener((observable, oldValue, newValue) ->
+		facebookModel.fbNameProperty().addListener((observable, oldValue, newValue) ->
 		{
 			fbNameLabel.setText("Welcome, " + newValue + "!");
 		});
 
-		model.fbLoggedInProperty().addListener((observable, oldValue, newValue) ->
+		facebookModel.fbLoggedInProperty().addListener((observable, oldValue, newValue) ->
 		{
 			if (newValue.equals(true))
 			{
@@ -200,7 +204,7 @@ public class GameBarController extends Controller
 			}
 		});
 
-		model.fbLoginMessageProperty().addListener((observable, oldValue, newValue) ->
+		facebookModel.fbLoginMessageProperty().addListener((observable, oldValue, newValue) ->
 		{
 			fbLoginMessage.setVisible(true);
 			fbLoginMessage.setText(newValue);
@@ -279,7 +283,7 @@ public class GameBarController extends Controller
 	 */
 	public void adjustLoginImageSize(double width)
 	{
-		if (!model.getFbLoggedIn())
+		if (!facebookModel.getFbLoggedIn())
 		{
 			if (width < 400)
 			{
