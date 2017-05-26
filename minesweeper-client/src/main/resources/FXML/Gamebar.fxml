@@ -17,6 +17,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.control.Label?>
+<?import minesweeper.view.FadeLabel?>
 
 <GridPane minWidth="250.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="minesweeper.controller.GameBarController">
 	<children>
@@ -46,7 +47,7 @@
 		
 		<HBox alignment="TOP_CENTER" GridPane.columnIndex="1">
 			<children>
-				<Label fx:id="fbLoginMessage" alignment="TOP_CENTER" textAlignment="CENTER" visible="false" wrapText="true" />
+				<FadeLabel fx:id="fbLoginMessage" alignment="TOP_CENTER" textAlignment="CENTER" visible="false" wrapText="true" />
 			</children>
 		</HBox>
 		
