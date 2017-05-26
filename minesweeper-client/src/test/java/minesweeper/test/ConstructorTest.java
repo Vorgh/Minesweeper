@@ -32,16 +32,6 @@ public class ConstructorTest
 	}
 
 	@Test
-	public void creatingModelShouldInitializeValues()
-	{
-		MinesweeperModel model = new MinesweeperModel();
-
-		assertEquals(0, model.getElapsedTime());
-		assertFalse(model.getFirstClickOccurred());
-		assertFalse(model.getFbLoggedIn());
-	}
-
-	@Test
 	public void creatingModelWithParametersShouldLoadResources()
 	{
 		try
@@ -77,8 +67,8 @@ public class ConstructorTest
 		}
 		catch (IOException | URISyntaxException e)
 		{
-			e.printStackTrace();
 			fail("Couldn't load resources.");
+			e.printStackTrace();
 		}
 	}
 }
