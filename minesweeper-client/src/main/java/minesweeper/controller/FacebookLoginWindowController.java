@@ -129,7 +129,7 @@ public class FacebookLoginWindowController extends Controller
 		}
 		else
 		{
-			model.getFacebookModel().setFbLoginMessage("Could not get the Facebook client ID");
+			setLoginMessage("Could not get the Facebook client ID!");
 			stage.hide();
 		}
 	}
@@ -151,14 +151,14 @@ public class FacebookLoginWindowController extends Controller
 			{
 				String message = "Facebook login successful!";
 				setModelFacebookData(ServerConnection.getConnectedUser());
-				model.getFacebookModel().setFbLoginMessage(message);
+				setLoginMessage(message);
 				logger.info(message);
 			}
 		}
 		catch (IOException | ClassNotFoundException e)
 		{
 			String message = "Facebook login failed!";
-			model.getFacebookModel().setFbLoginMessage(message);
+			setLoginMessage(message);
 			logger.warn(message);
 			logger.error(e.getMessage(), e);
 		}
@@ -182,5 +182,13 @@ public class FacebookLoginWindowController extends Controller
 		facebookModel.setFbProfilePic(new Image(user.getPicture().getUrl()));
 		facebookModel.setFbUserId(user.getId());
 		facebookModel.setFbLoggedIn(true);
+	}
+	
+	private void setLoginMessage(String message)
+	{
+		FacebookDataModel fbModel = model.getFacebookModel();
+		
+		fbModel.setFbLoginMessage(null); //Needed to trigger the change listener, even when the message is the same.
+		fbModel.setFbLoginMessage(message);
 	}
 }

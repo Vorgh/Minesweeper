@@ -31,6 +31,7 @@ import minesweeper.connection.ServerConnection;
 import minesweeper.model.FacebookDataModel;
 import minesweeper.model.MinesweeperModel;
 import minesweeper.util.ResourceUtils;
+import minesweeper.view.FadeLabel;
 
 /**
  * The controller class of the game bar, located above the game grid.
@@ -45,9 +46,9 @@ import minesweeper.util.ResourceUtils;
 public class GameBarController extends Controller
 {
 	private static Logger logger = LoggerFactory.getLogger(GameBarController.class);
-	
+
 	@FXML
-	private Label fbLoginMessage;
+	private FadeLabel fbLoginMessage;
 	@FXML
 	private Label fbNameLabel;
 	@FXML
@@ -86,7 +87,7 @@ public class GameBarController extends Controller
 	private String color;
 	private Image mineImage;
 	private Image timeImage;
-	
+
 	private FacebookDataModel facebookModel;
 
 	@Override
@@ -154,16 +155,16 @@ public class GameBarController extends Controller
 		{
 			mineLabel.setText(String.valueOf(newValue));
 		});
-		
-		model.newGameStartedProperty().addListener((observable, oldValue, newValue) -> 
+
+		model.newGameStartedProperty().addListener((observable, oldValue, newValue) ->
 		{
 			if (newValue == true)
 			{
 				getTimer().playFromStart();
 			}
 		});
-		
-		model.gameOverProperty().addListener((observable, oldValue, newValue) -> 
+
+		model.gameOverProperty().addListener((observable, oldValue, newValue) ->
 		{
 			if (newValue == true)
 			{
