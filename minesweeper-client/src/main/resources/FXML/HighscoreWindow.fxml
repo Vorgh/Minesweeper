@@ -8,28 +8,40 @@
 
 <VBox alignment="CENTER" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="minesweeper.controller.HighscoreWindowController">
    <children>
-      <ToolBar nodeOrientation="LEFT_TO_RIGHT">
-        <items>
-            <HBox alignment="CENTER" fillHeight="false" prefWidth="400.0">
+      <AnchorPane>
+         <children>
+            <HBox alignment="CENTER">
                <children>
                   <ToggleButton fx:id="localButton" mnemonicParsing="false" text="Local">
                      <toggleGroup>
                         <ToggleGroup fx:id="diffToggleGroup" />
                      </toggleGroup>
                      <HBox.margin>
-                        <Insets right="20.0" />
+                        <Insets left="10.0" />
                      </HBox.margin>
                   </ToggleButton>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" fillHeight="false" AnchorPane.leftAnchor="135.0">
+               <children>
                   <ToggleButton fx:id="easyButton" mnemonicParsing="false" text="Easy" toggleGroup="$diffToggleGroup" />
                   <ToggleButton fx:id="mediumButton" mnemonicParsing="false" text="Medium" toggleGroup="$diffToggleGroup" />
                   <ToggleButton fx:id="hardButton" mnemonicParsing="false" text="Hard" toggleGroup="$diffToggleGroup" />
                   <ToggleButton fx:id="customButton" mnemonicParsing="false" text="Custom" toggleGroup="$diffToggleGroup" />
                </children>
             </HBox>
-        </items>
-      </ToolBar>
+            <HBox alignment="CENTER_RIGHT" AnchorPane.rightAnchor="0.0">
+         	   <children>
+            	  <Button fx:id="clearScoresButton" alignment="CENTER_RIGHT" mnemonicParsing="false" text="Clear local scores" />
+               </children>
+            </HBox>
+         </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </AnchorPane>
       <!--  -->
-      <AnchorPane>
+      <AnchorPane style="-fx-border-width: 1 0 0 0; -fx-border-style: solid;">
          <children>
             <Label alignment="CENTER" prefWidth="130.0" style="-fx-border-width: 0 1 0 0; -fx-border-style: solid;" text="Name" AnchorPane.leftAnchor="40.0" />
             <Label alignment="CENTER" prefWidth="60.0" style="-fx-border-width: 0 1 0 0; -fx-border-style: solid;" text="Mines" AnchorPane.leftAnchor="170.0" />

@@ -11,6 +11,7 @@ import org.slf4j.LoggerFactory;
 import javafx.beans.Observable;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
 import javafx.scene.control.ToggleButton;
@@ -46,11 +47,10 @@ public class HighscoreWindowController extends Controller
 	@FXML
 	private ToggleButton customButton;
 	@FXML
+	private Button clearScoresButton;
+	@FXML
 	private ListView<ScoreData> scoreListView;
 
-	/**
-	 * {@inheritDoc}
-	 */
 	@Override
 	public void initialize(URL location, ResourceBundle resources)
 	{
@@ -120,6 +120,22 @@ public class HighscoreWindowController extends Controller
 			{
 				scoreListView.getItems().clear();
 				loadOnlineScore("Custom");
+			}
+		});
+		
+		clearScoresButton.setOnAction(e -> 
+		{
+			try
+			{
+				LocalScoreXML.clear();
+				if (localButton.isSelected())
+				{
+					scoreListView.getItems().clear();
+				}
+			}
+			catch (IOException ex)
+			{
+				ex.printStackTrace();
 			}
 		});
 

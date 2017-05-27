@@ -41,7 +41,7 @@ import minesweeper.view.Grid;
 public class GridController extends Controller implements EventHandler<MouseEvent>
 {
 	private static Logger logger = LoggerFactory.getLogger(GridController.class);
-	
+
 	@FXML
 	private Grid grid;
 
@@ -67,7 +67,7 @@ public class GridController extends Controller implements EventHandler<MouseEven
 
 		mouseReleaseRecursionFlag = false;
 		isMousePressed = false;
-		
+
 		addEventFilters();
 	}
 
@@ -75,8 +75,8 @@ public class GridController extends Controller implements EventHandler<MouseEven
 	public void setModel(MinesweeperModel model)
 	{
 		super.setModel(model);
-		
-		model.newGameStartedProperty().addListener((observable, oldValue, newValue) -> 
+
+		model.newGameStartedProperty().addListener((observable, oldValue, newValue) ->
 		{
 			if (newValue == true)
 			{
@@ -102,15 +102,15 @@ public class GridController extends Controller implements EventHandler<MouseEven
 				}
 			}
 		});
-		
+
 		model.colorProperty().addListener((observable, oldValue, newValue) ->
 		{
 			setColor(newValue);
-			
+
 			Image img = getResourceImage(CellValues.CELL_HIDDEN);
-			for (int i=0; i<model.getRows(); i++)
+			for (int i = 0; i < model.getRows(); i++)
 			{
-				for (int j=0; j<model.getCols(); j++)
+				for (int j = 0; j < model.getCols(); j++)
 				{
 					if (model.getCell(i, j).getState() == Cell.STATE_HIDDEN)
 					{
@@ -568,7 +568,7 @@ public class GridController extends Controller implements EventHandler<MouseEven
 	{
 		return model.getCellResources().get(ResourceUtils.valueToResourceName(value, getColor()));
 	}
-	
+
 	/**
 	 * Gets the color of the grid.
 	 * 
@@ -581,6 +581,7 @@ public class GridController extends Controller implements EventHandler<MouseEven
 
 	/**
 	 * Sets the color of the grid.
+	 * 
 	 * @param color The color of the grid.
 	 */
 	public void setColor(String color)

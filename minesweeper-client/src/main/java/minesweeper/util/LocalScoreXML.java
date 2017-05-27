@@ -227,4 +227,16 @@ public class LocalScoreXML
 
 		return scoreList;
 	}
+	
+	/**
+	 * Deletes all scores from the local score XML file.
+	 * 
+	 * @throws IOException when an IO error has occurred.
+	 */
+	public static void clear() throws IOException
+	{
+		Element root = xmlDocument.getRootElement();
+		root.getChildren().clear();
+		updateFile();
+	}
 }
