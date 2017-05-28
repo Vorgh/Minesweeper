@@ -54,5 +54,5 @@ So you must change these lines:
 
 If everything was ok, you should be able to start your server now. You can connect using the instructions above.  
 To start the server use one of the following methods:
-* Use `mvn exec:java@run-server` within the server directory.
+* Use `mvn exec:java` within the server directory.
 * Build the whole project (from the root folder) with `mvn package`, and execute the created jar file in the server folder.
